@@ -13,5 +13,6 @@
 ***
 ## Research Group
 ### Knowledge Graph
-[1] fudan university+ university of illinois at chicago
+[1] fudan university+ university of illinois at chicago 
+*
 Xiancheng Xie, Yun Xiong, Philip S Yu(uic), Yangyong Zhu
