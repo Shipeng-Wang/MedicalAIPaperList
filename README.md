@@ -20,6 +20,10 @@
 ### 2. EHR Coding
 [1] Xiancheng Xie, Yun Xiong, Philip S. Yu, Yangyong Zhu. **EHR Coding with Multi-scale Feature Attention and Structured Knowledge Graph Propagation**. CIKM 2019: 649-658 [[PDF]](http://delivery.acm.org/10.1145/3360000/3357897/p649-xie.pdf?ip=211.87.239.55&id=3357897&acc=OPEN&key=BF85BBA5741FDC6E%2EBA9BBD89F2E1EC6A%2E4D4702B0C3E38B35%2E6D218144511F3437&__acm__=1575427234_a9f472fe217137daaa87426759aa5dc1)  
 本地路径：F:\A_博士阶段\论文\CIKM2019\医疗健康相关
+**主要内容**： 
+背景：将代表诊断或程序的标准医疗代码（如ICD-9-CM）分配给电子健康记录（EHR）是医学领域的一项重要任务。  
+问题：然而，由于临床笔记是由多个长而异质的文本叙述（如出院诊断、病理报告、外科手术笔记）组成，因此自动编码很困难。此外，编码标签空间大，标签分布极不平衡。目前的方法主要是将EHR编码作为一个多标签文本分类任务，采用固定窗口大小的浅卷积神经网络，无法学习可变的n-gram特征和代码之间的本体结构。  
+本文工作：（1）在本文中，我们利用一个紧密连接的卷积神经网络，它能够产生可变的n-gram特征，用于临床笔记特征的学习。（2）我们还结合了多尺度特征注意来自适应地选择多尺度特征，因为每个单词的临床笔记中信息量最大的n-图可以根据邻域而变化长度。（3）我们利用图卷积神经网络来捕捉医疗编码之间的层次关系和每个编码的语义。最后，我们在公共数据集上验证了我们的方法，评估结果表明我们的方法可以显著优于其他最新的模型。
 
 ### 3. 消化疾病
 [1] Wu, Lianlian, et al. **Randomised controlled trial of WISENSE, a real-time quality improving system for monitoring blind spots during esophagogastroduodenoscopy.** Gut (2019): gutjnl-2018. [[PDF]](https://gut.bmj.com/content/gutjnl/68/12/2161.full.pdf)  
@@ -27,7 +31,9 @@
 **主要内容**：  
 食管胃十二指肠镜（egd）是诊断上消化道病变的关键。然而，内镜医师在egd表现上存在显著差异，影响胃癌和前体病变的发现率。本研究的目的是建立一个实时的质量改进系统WISENSE，在EGD过程中监测盲点，对过程进行计时，并自动生成光图像，从而提高日常内镜检查的质量。  
 利用深度卷积神经网络和深度强化学习方法开发了wisense系统。患者包括武汉大学人民医院因体检、症状、监护等原因转诊的病人。入选的患者被随机分为在WISENSE的帮助下或不帮助下接受EGD的组。主要目的是确定WISENSE辅助组与对照组之间的盲点率是否存在差异。  
-Wisense在真实的EGD视频中监控盲点的准确率为90.40%。共有324名患者被招募并随机化。wisense组153例，对照组150例。与对照组相比，wisense组的盲点率较低（5.86%对22.46%，p<0.001），平均差异为-15.39%（95%ci-19.23至-11.54）。无明显不良反应。WISENSE显著降低了EGD手术的盲点率，可用于提高日常内镜检查的质量。
+Wisense在真实的EGD视频中监控盲点的准确率为90.40%。共有324名患者被招募并随机化。wisense组153例，对照组150例。与对照组相比，wisense组的盲点率较低（5.86%对22.46%，p<0.001），平均差异为-15.39%（95%ci-19.23至-11.54）。无明显不良反应。WISENSE显著降低了EGD手术的盲点率，可用于提高日常内镜检查的质量。  
+
+
 
 [2] Luo, Huiyan, et al. **Real-time artificial intelligence for detection of upper gastrointestinal cancer by endoscopy: a multicentre, case-control, diagnostic study**. The Lancet Oncology 20.12 (2019): 1645-1654. [[PDF]](https://gut.bmj.com/content/gutjnl/68/12/2161.full.pdf)  
 本地路径：F:\A_博士阶段\消化内镜资料\论文  
