@@ -13,26 +13,27 @@
 本文介绍了医疗保健领域的深度学习技术，重点讨论了计算机视觉（CV）、自然语言处理（NLP）、强化学习（RL）和通用方法方面的深度学习。我们将描述这些计算技术如何影响医学的几个关键领域，并探讨如何构建端到端系统。我们对CV的讨论主要集中在医学成像上，对NLP的描述主要在电子健康记录数据等领域。同样，在机器人辅助手术的背景下也讨论了RL，同时讨论了通用方法的深度学习在基因组学的应用。    
 
 [3] Topol, Eric J. **High-performance medicine: the convergence of human and artificial intelligence.** Nature medicine 25.1 (2019): 44-56.  
+本地路径：F:\A_博士阶段\论文\Survey  
 **主要内容**：  
 人工智能的使用，特别是深度学习，已经通过使用标记的大数据，以及显著增强的计算能力和云存储，实现了跨学科工作。在医学领域，深度学习开始在三个层面产生影响：对于临床医生，主要是快速、准确地解释图像；对卫生系统，改进工作流程和减少医疗错误的可能性；对病人，通过使他们能够处理自己的数据来保持健康。本文也讨论了当前的存在的局限性，包括偏见(bias)、隐私和安全性，缺乏透明度，以及这些应用的未来方向。   
-[4] 
+
 
 ### 2. EHR Coding
 [1] Xiancheng Xie, Yun Xiong, Philip S. Yu, Yangyong Zhu. **EHR Coding with Multi-scale Feature Attention and Structured Knowledge Graph Propagation**. CIKM 2019: 649-658 [[PDF]](http://delivery.acm.org/10.1145/3360000/3357897/p649-xie.pdf?ip=211.87.239.55&id=3357897&acc=OPEN&key=BF85BBA5741FDC6E%2EBA9BBD89F2E1EC6A%2E4D4702B0C3E38B35%2E6D218144511F3437&__acm__=1575427234_a9f472fe217137daaa87426759aa5dc1)  
-本地路径：F:\A_博士阶段\论文\CIKM2019\医疗健康相关
+本地路径：F:\A_博士阶段\论文\CIKM2019\医疗健康相关   
 **主要内容**： 
 背景：将代表诊断或程序的标准医疗代码（如ICD-9-CM）分配给电子健康记录（EHR）是医学领域的一项重要任务。  
 问题：然而，由于临床笔记是由多个长而异质的文本叙述（如出院诊断、病理报告、外科手术笔记）组成，因此自动编码很困难。此外，编码标签空间大，标签分布极不平衡。目前的方法主要是将EHR编码作为一个多标签文本分类任务，采用固定窗口大小的浅卷积神经网络，无法学习可变的n-gram特征和代码之间的本体结构。  
 本文工作：（1）在本文中，我们利用一个紧密连接的卷积神经网络，它能够产生可变的n-gram特征，用于临床笔记特征的学习。（2）我们还结合了多尺度特征注意来自适应地选择多尺度特征，因为每个单词的临床笔记中信息量最大的n-图可以根据邻域而变化长度。（3）我们利用图卷积神经网络来捕捉医疗编码之间的层次关系和每个编码的语义。最后，我们在公共数据集上验证了我们的方法，评估结果表明我们的方法可以显著优于其他最新的模型。  
   
 [2] Gao, Jingyue, et al. **Camp: Co-attention memory networks for diagnosis prediction in healthcare.** ICDM, 2019. [[PDF]](https://jygao97.github.io/papers/CAMP_ICDM19_long.pdf)  
-本地路径：F:\A_博士阶段\论文\CIKM2019\医疗健康相关  
+本地路径：F:\A_博士阶段\论文\CIKM2019\医疗健康相关    
 诊断预测是个性化医疗的核心研究课题，其目的是从历史电子病历中预测患者未来的健康信息。虽然已有一些基于RNN的方法被提出用于序列EHR数据的建模，但这些方法存在三个主要问题。首先，他们无法捕捉到患者健康状况的细粒度发展模式。第二，他们没有考虑重要背景（例如，患者人口统计）和历史诊断之间的相互影响。第三，RNN中隐藏的状态向量难以解释，导致信任问题。  
 为了应对这些挑战，我们提出了一个被称为诊断预测共同注意记忆网络（CAMP）的模型，该模型将历史记录、细粒度患者状况和人口统计学与基于共同注意的三方交互架构紧密地结合在一起。我们的模型使用一个存储网络来扩充RNN，以丰富表示能力。内存网络通过显式地将疾病分类合并到一个内存槽数组中，实现了对细粒度患者状况的分析。我们设计了内存槽以确保可解释性，并实例化了内存网络的读/写操作，从而通过共同关注，使内存与患者统计数据有效地协同工作。实验和对真实数据集的案例研究表明，CAMP在预测精度方面始终优于最新的方法，并且具有很高的可解释性。
 
 ### 3. 消化疾病
 [1] Wu, Lianlian, et al. **Randomised controlled trial of WISENSE, a real-time quality improving system for monitoring blind spots during esophagogastroduodenoscopy.** Gut (2019): gutjnl-2018. [[PDF]](https://gut.bmj.com/content/gutjnl/68/12/2161.full.pdf)  
-本地路径：F:\A_博士阶段\消化内镜资料\论文  
+本地路径：F:\A_博士阶段\消化内镜资料\论文    
 **主要内容**：  
 食管胃十二指肠镜（egd）是诊断上消化道病变的关键。然而，内镜医师在egd表现上存在显著差异，影响胃癌和前体病变的发现率。本研究的目的是建立一个实时的质量改进系统WISENSE，在EGD过程中监测盲点，对过程进行计时，并自动生成光图像，从而提高日常内镜检查的质量。  
 利用深度卷积神经网络和深度强化学习方法开发了wisense系统。患者包括武汉大学人民医院因体检、症状、监护等原因转诊的病人。入选的患者被随机分为在WISENSE的帮助下或不帮助下接受EGD的组。主要目的是确定WISENSE辅助组与对照组之间的盲点率是否存在差异。  
@@ -45,7 +46,8 @@ Wisense在真实的EGD视频中监控盲点的准确率为90.40%。共有324名�
 该智能辅助系统具有实时活检部位精确提示、内镜检查智能质控和自动采图等功能，在医生进行内镜检查的同时自动捕获图像并进行云端AI分析，实时提示精确的可疑病灶区域，指导内镜医生选择活检部位；在检查过程中，该系统能对检查时间和检查部位进行质控，减少遗漏关键信息，提高检查质量；在临床操作中，该系统还能够依据指南要求自动采图存储，减少医生“一心两用”、“手脚并用”带来遗漏关键信息的可能性。  
 构建了基于云技术的多中心上消化道癌内镜AI诊断平台，该云诊断平台可以自动捕获内镜检查图像上传至云端进行AI分析，实时向操作者反馈提示可疑病灶区域，指导操作者更有针对性的选择活检部位，提高活检阳性率。  
 
-[3] Hirasawa, Toshiaki, et al. **Application of artificial intelligence using a convolutional neural network for detecting gastric cancer in endoscopic images.** Gastric Cancer 21.4 (2018): 653-660.  
+[3] Hirasawa, Toshiaki, et al. **Application of artificial intelligence using a convolutional neural network for detecting gastric cancer in endoscopic images.** Gastric Cancer 21.4 (2018): 653-660. 
+本地路径：F:\A_博士阶段\消化内镜资料\论文  
 **主要内容**：  
 利用卷积神经网络（cnns）进行深度学习的人工智能图像识别技术得到了极大的改进，并越来越多地应用于医学诊断成像领域。我们开发了一种能在内镜图像中自动检测胃癌的cnn。  
 构建基于cnn的胃癌诊断系统，该CNN结构基于Single Shot MultiBox Detector（SSD），利用13584张胃癌内镜图像进行训练。为了评估诊断的准确性，我们将收集自69例患者77个胃癌病灶的2296个胃图像的独立测试集应用于构建的cnn。  
