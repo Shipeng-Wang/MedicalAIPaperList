@@ -1,4 +1,4 @@
-# Medical AI Paper List
+# Medical Survey
 ***
 ## Medical Classification
 ### 1. REVIEW and SURVEY 综述类
@@ -17,7 +17,6 @@
 **主要内容**：  
 人工智能的使用，特别是深度学习，已经通过使用标记的大数据，以及显著增强的计算能力和云存储，实现了跨学科工作。在医学领域，深度学习开始在三个层面产生影响：对于临床医生，主要是快速、准确地解释图像；对卫生系统，改进工作流程和减少医疗错误的可能性；对病人，通过使他们能够处理自己的数据来保持健康。本文也讨论了当前的存在的局限性，包括偏见(bias)、隐私和安全性，缺乏透明度，以及这些应用的未来方向。   
 
-
 ### 2. EHR Coding
 [1] Xiancheng Xie, Yun Xiong, Philip S. Yu, Yangyong Zhu. **EHR Coding with Multi-scale Feature Attention and Structured Knowledge Graph Propagation**. CIKM 2019: 649-658 [[PDF]](http://delivery.acm.org/10.1145/3360000/3357897/p649-xie.pdf?ip=211.87.239.55&id=3357897&acc=OPEN&key=BF85BBA5741FDC6E%2EBA9BBD89F2E1EC6A%2E4D4702B0C3E38B35%2E6D218144511F3437&__acm__=1575427234_a9f472fe217137daaa87426759aa5dc1)  
 本地路径：F:\A_博士阶段\论文\CIKM2019\医疗健康相关   
@@ -26,12 +25,13 @@
 问题：然而，由于临床笔记是由多个长而异质的文本叙述（如出院诊断、病理报告、外科手术笔记）组成，因此自动编码很困难。此外，编码标签空间大，标签分布极不平衡。目前的方法主要是将EHR编码作为一个多标签文本分类任务，采用固定窗口大小的浅卷积神经网络，无法学习可变的n-gram特征和代码之间的本体结构。  
 本文工作：（1）在本文中，我们利用一个紧密连接的卷积神经网络，它能够产生可变的n-gram特征，用于临床笔记特征的学习。（2）我们还结合了多尺度特征注意来自适应地选择多尺度特征，因为每个单词的临床笔记中信息量最大的n-图可以根据邻域而变化长度。（3）我们利用图卷积神经网络来捕捉医疗编码之间的层次关系和每个编码的语义。最后，我们在公共数据集上验证了我们的方法，评估结果表明我们的方法可以显著优于其他最新的模型。  
   
-[2] Gao, Jingyue, et al. **Camp: Co-attention memory networks for diagnosis prediction in healthcare.** ICDM, 2019. [[PDF]](https://jygao97.github.io/papers/CAMP_ICDM19_long.pdf)  
+### 3. Diagnosis Prediction  
+[1] Gao, Jingyue, et al. **Camp: Co-attention memory networks for diagnosis prediction in healthcare.** ICDM, 2019. [[PDF]](https://jygao97.github.io/papers/CAMP_ICDM19_long.pdf)  
 本地路径：F:\A_博士阶段\论文\CIKM2019\医疗健康相关    
 诊断预测是个性化医疗的核心研究课题，其目的是从历史电子病历中预测患者未来的健康信息。虽然已有一些基于RNN的方法被提出用于序列EHR数据的建模，但这些方法存在三个主要问题。首先，他们无法捕捉到患者健康状况的细粒度发展模式。第二，他们没有考虑重要背景（例如，患者人口统计）和历史诊断之间的相互影响。第三，RNN中隐藏的状态向量难以解释，导致信任问题。  
 为了应对这些挑战，我们提出了一个被称为诊断预测共同注意记忆网络（CAMP）的模型，该模型将历史记录、细粒度患者状况和人口统计学与基于共同注意的三方交互架构紧密地结合在一起。我们的模型使用一个存储网络来扩充RNN，以丰富表示能力。内存网络通过显式地将疾病分类合并到一个内存槽数组中，实现了对细粒度患者状况的分析。我们设计了内存槽以确保可解释性，并实例化了内存网络的读/写操作，从而通过共同关注，使内存与患者统计数据有效地协同工作。实验和对真实数据集的案例研究表明，CAMP在预测精度方面始终优于最新的方法，并且具有很高的可解释性。
 
-### 3. 消化疾病
+## 消化疾病
 [1] Wu, Lianlian, et al. **Randomised controlled trial of WISENSE, a real-time quality improving system for monitoring blind spots during esophagogastroduodenoscopy.** Gut (2019): gutjnl-2018. [[PDF]](https://gut.bmj.com/content/gutjnl/68/12/2161.full.pdf)  
 本地路径：F:\A_博士阶段\消化内镜资料\论文    
 **主要内容**：  
