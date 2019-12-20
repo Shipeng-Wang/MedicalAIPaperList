@@ -21,7 +21,7 @@
 #### 2.1 Medical Concept Embedding
 [1] Peng, Xueping, et al. **Temporal self-attention network for medical concept embedding.** arXiv preprint arXiv:1909.06886 (2019).[[PDF]](https://arxiv.org/pdf/1909.06886.pdf)  
 **主要内容**：   
-
+在纵向电子健康记录（EHRs）中，患者的事件记录分布在很长一段时间内，事件之间的时间关系反映了足够的领域知识，有助于进行住院死亡率等预测任务。医学概念嵌入作为一种特征提取方法，将一组具有特定时间戳的医学概念转化为一个向量，并将其输入到一个有监督的学习算法中。嵌入的质量对医学数据的学习性能有显著的影响。本文提出了一种基于自我注意机制的医学概念嵌入方法来表示每一个医学概念。我们提出了一种新的注意机制来捕捉医学概念之间的上下文信息和时间关系。在此基础上，提出了一种轻量化的神经网络“时间自关注网络（TeSAN）”，用于学习基于所提出的注意机制的医学概念嵌入。为了验证我们提出的方法的有效性，我们对两个公共EHRs数据集进行了聚类和预测任务，将TeSAN与五种最新的嵌入方法进行了比较。实验结果表明，本文提出的TeSAN模型优于所有比较方法。据我们所知，这项工作是第一次利用医学事件之间的时间自我关注关系。
 
 #### 2.2 EHR Coding
 [1] Xiancheng Xie, Yun Xiong, Philip S. Yu, Yangyong Zhu. **EHR Coding with Multi-scale Feature Attention and Structured Knowledge Graph Propagation**. CIKM 2019: 649-658 [[PDF]](http://delivery.acm.org/10.1145/3360000/3357897/p649-xie.pdf?ip=211.87.239.55&id=3357897&acc=OPEN&key=BF85BBA5741FDC6E%2EBA9BBD89F2E1EC6A%2E4D4702B0C3E38B35%2E6D218144511F3437&__acm__=1575427234_a9f472fe217137daaa87426759aa5dc1)  
@@ -33,19 +33,30 @@
   
 ### 3. Prediction  
 [1] Gao, Jingyue, et al. **Camp: Co-attention memory networks for diagnosis prediction in healthcare.** ICDM, 2019. [[PDF]](https://jygao97.github.io/papers/CAMP_ICDM19_long.pdf)  
-本地路径：F:\A_博士阶段\论文\CIKM2019\医疗健康相关    
+本地路径：F:\A_博士阶段\论文\CIKM2019\医疗健康相关  
+**主要内容**：  
 诊断预测是个性化医疗的核心研究课题，其目的是从历史电子病历中预测患者未来的健康信息。虽然已有一些基于RNN的方法被提出用于序列EHR数据的建模，但这些方法存在三个主要问题。首先，他们无法捕捉到患者健康状况的细粒度发展模式。第二，他们没有考虑重要背景（例如，患者人口统计）和历史诊断之间的相互影响。第三，RNN中隐藏的状态向量难以解释，导致信任问题。  
 为了应对这些挑战，我们提出了一个被称为诊断预测共同注意记忆网络（CAMP）的模型，该模型将历史记录、细粒度患者状况和人口统计学与基于共同注意的三方交互架构紧密地结合在一起。我们的模型使用一个存储网络来扩充RNN，以丰富表示能力。内存网络通过显式地将疾病分类合并到一个内存槽数组中，实现了对细粒度患者状况的分析。我们设计了内存槽以确保可解释性，并实例化了内存网络的读/写操作，从而通过共同关注，使内存与患者统计数据有效地协同工作。实验和对真实数据集的案例研究表明，CAMP在预测精度方面始终优于最新的方法，并且具有很高的可解释性。  
 
-[2] Tan, Qingxiong, et al. **UA-CRNN: Uncertainty-Aware Convolutional Recurrent Neural Network for Mortality Risk Prediction.** Proceedings of the 28th ACM International Conference on Information and Knowledge Management. ACM, 2019.[[PDF]](http://delivery.acm.org/10.1145/3360000/3357884/p109-tan.pdf?ip=211.87.239.55&id=3357884&acc=ACTIVE%20SERVICE&key=BF85BBA5741FDC6E%2EBA9BBD89F2E1EC6A%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1576813028_16f942d129d2e60f5bd96ca1174e62a4)
+[2] Tan, Qingxiong, et al. **UA-CRNN: Uncertainty-Aware Convolutional Recurrent Neural Network for Mortality Risk Prediction.** Proceedings of the 28th ACM International Conference on Information and Knowledge Management. ACM, 2019.[[PDF]](http://delivery.acm.org/10.1145/3360000/3357884/p109-tan.pdf?ip=211.87.239.55&id=3357884&acc=ACTIVE%20SERVICE&key=BF85BBA5741FDC6E%2EBA9BBD89F2E1EC6A%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1576813028_16f942d129d2e60f5bd96ca1174e62a4)  
+**主要内容**：  
+准确预测死亡风险对于评估早期治疗、发现高危患者和改善医疗保健效果具有重要意义。由于连续记录中的时间间隔不同，从不规则的临床时间序列数据预测死亡率风险具有挑战性。现有的方法通常通过从原始的不规则数据生成规则的时间序列数据来解决这个问题，而不考虑由变化的时间间隔引起的生成数据中的不确定性。本文提出了一种新的不确定性感知卷积递归神经网络（UA-CRNN），它将不确定性信息融入到生成的数据中，以提高死亡率风险预测性能。为了处理具有不同频率子序列的复杂临床时间序列数据，我们建议将不确定性信息纳入子序列层次，而不是整个时间序列数据。具体地说，我们设计了一种新的分层不确定性感知分解层（UADL），将时间序列自适应地分解成不同的子序列，并根据其可靠性赋予相应的权重。在两个实际临床数据集上的实验结果表明，所提出的UA-CRNN方法在短期和长期死亡率风险预测方面均显著优于最新方法。
 
-[3] Yin, Changchang, et al. **Domain Knowledge Guided Deep Learning with Electronic Health Records.** ICDM, 2019.[[PDF]](https://pdfs.semanticscholar.org/7007/fb3b4c316b2146057f2ba12f3cf0ba5dcbd0.pdf)
+[3] Yin, Changchang, et al. **Domain Knowledge Guided Deep Learning with Electronic Health Records.** ICDM, 2019.[[PDF]](https://pdfs.semanticscholar.org/7007/fb3b4c316b2146057f2ba12f3cf0ba5dcbd0.pdf)  
+**主要内容**：  
+由于其在电子健康记录（EHRs）临床风险预测方面的良好表现，深度学习方法引起了医疗研究人员的极大兴趣。然而，有四个挑战：（一）数据不足。许多方法需要大量的训练数据才能达到满意的效果。（二）可解释性。许多方法的结果很难向临床医生解释（例如，为什么模型会做出特定的预测，哪些事件会导致临床结果）。（三）领域知识整合。没有现有的方法动态地利用复杂的医学知识（例如，因果关系，并且是由临床事件之间引起的）。（四）时间间隔信息。大多数现有方法只考虑EHR访问的相对顺序，而忽略相邻访问之间的不规则时间间隔。在本研究中，我们提出一个新的模式，即领域知识引导回归神经网路（DG-RNN），直接将医学知识图中的领域知识引入RNN架构，并考虑不规则的时间间隔。心衰风险预测任务的实验结果表明，我们的模型不仅优于目前最先进的基于深度学习的风险预测模型，而且还将个体医疗事件与心衰发作相关联，从而为可解释的准确临床风险预测铺平了道路。  
 
 ### 4. Classification
-[1] Li, Xiaoyu, et al. **Domain Knowledge Guided Deep Atrial Fibrillation Classification and Its Visual Interpretation.** Proceedings of the 28th ACM International Conference on Information and Knowledge Management. ACM, 2019.[[PDF]](http://delivery.acm.org/10.1145/3360000/3357998/p129-li.pdf?ip=211.87.239.55&id=3357998&acc=ACTIVE%20SERVICE&key=BF85BBA5741FDC6E%2EBA9BBD89F2E1EC6A%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1576813170_a9dbbee15ab45ae129d8641a68bb7e70)
+[1] Li, Xiaoyu, et al. **Domain Knowledge Guided Deep Atrial Fibrillation Classification and Its Visual Interpretation.** Proceedings of the 28th ACM International Conference on Information and Knowledge Management. ACM, 2019.[[PDF]](http://delivery.acm.org/10.1145/3360000/3357998/p129-li.pdf?ip=211.87.239.55&id=3357998&acc=ACTIVE%20SERVICE&key=BF85BBA5741FDC6E%2EBA9BBD89F2E1EC6A%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1576813170_a9dbbee15ab45ae129d8641a68bb7e70)  
+**主要内容**：  
+手工制作的特征已经被证明在解决心电图分类问题上是有用的。这些特征依赖于领域知识，具有临床意义。然而，特性的构造在实践中需要冗长的微调。近年来，人们提出了一套端到端的深层神经网络模型，在心电分类中取得了很好的效果。这些模型虽然有效，但往往学习到与人的概念不匹配的模式，因此很难用解释方法得到令人信服的解释。考虑到心脏病专家难以接受深度学习无法解释的结果，这种局限性显著地缩小了深度模型的适用范围。为了缓解这种局限性，我们从两个世界中汲取精华，提出了一种基于领域知识的深度神经网络。具体地说，我们利用一个深度残差网络作为分类框架，在这个框架中，我们采用关键特征（P波和R峰位置）重建任务，将领域知识融入到学习过程中。重建任务使得模型更加关注心电信号中的关键特征点。此外，利用遮挡方法进行视觉解译，设计了心跳级和特征点级的可视化。实验结果表明，与无P波和R峰任务的模型相比，本文提出的ECG分类方法具有更好的分类性能，所得到的模式更易于解释。
 
 ### 5. Knowledge Discovering
-[1] Deng, Yang, et al. **MedTruth: A Semi-supervised Approach to Discovering Knowledge Condition Information from Multi-Source Medical Data.** Proceedings of the 28th ACM International Conference on Information and Knowledge Management. ACM, 2019.[[PDF]](http://delivery.acm.org/10.1145/3360000/3357934/p719-deng.pdf?ip=211.87.239.55&id=3357934&acc=ACTIVE%20SERVICE&key=BF85BBA5741FDC6E%2EBA9BBD89F2E1EC6A%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1576812887_19dd1480132a90b9995fe5a8c4fa37ff)
+[1] Deng, Yang, et al. **MedTruth: A Semi-supervised Approach to Discovering Knowledge Condition Information from Multi-Source Medical Data.** Proceedings of the 28th ACM International Conference on Information and Knowledge Management. ACM, 2019.[[PDF]](http://delivery.acm.org/10.1145/3360000/3357934/p719-deng.pdf?ip=211.87.239.55&id=3357934&acc=ACTIVE%20SERVICE&key=BF85BBA5741FDC6E%2EBA9BBD89F2E1EC6A%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1576812887_19dd1480132a90b9995fe5a8c4fa37ff)  
+**主要内容**：  
+知识图（KG）包含实体和实体之间的关系。由于它的表示能力，KG已经成功地应用于支持许多医疗/保健任务。然而，在医学领域，知识是在一定条件下存在的。例如，当患者是婴儿而不是其他年龄的人时，症状流鼻涕高度指示疾病百日咳的存在。医学知识的这种条件对于各种医学应用中的决策是至关重要的，在现有的医疗KGS中缺失。本文旨在从文本中发现医学知识条件，丰富知识库。  
+电子病历是临床数据的系统化收集，包含病人的详细信息，是发现医学知识状况的良好资源。不幸的是，由于正规化等原因，可用的电子病历数量有限。同时，大量的医学问答（QA）数据可供参考，对课题的研究有很大的帮助。然而，医疗质量保证数据的质量参差不齐，这可能会降低发现医疗知识状况的质量。针对这些挑战，我们提出了一种新的真理发现方法medthuth，用于医学知识条件的发现，它将先验的信源质量信息纳入信源可靠性估计过程中，并利用知识三重信息进行可信信息计算，在真实的医学数据集上进行了一系列实验，证明该方法能同时利用EMR和QA数据发现有意义和准确的医学知识条件。此外，在合成数据集上验证了该方法在不同场景下的有效性。
+
 
 ## 消化疾病
 [1] Wu, Lianlian, et al. **Randomised controlled trial of WISENSE, a real-time quality improving system for monitoring blind spots during esophagogastroduodenoscopy.** Gut (2019): gutjnl-2018. [[PDF]](https://gut.bmj.com/content/gutjnl/68/12/2161.full.pdf)  
