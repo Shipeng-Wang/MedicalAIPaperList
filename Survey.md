@@ -30,7 +30,11 @@
 背景：将代表诊断或程序的标准医疗代码（如ICD-9-CM）分配给电子健康记录（EHR）是医学领域的一项重要任务。  
 问题：然而，由于临床笔记是由多个长而异质的文本叙述（如出院诊断、病理报告、外科手术笔记）组成，因此自动编码很困难。此外，编码标签空间大，标签分布极不平衡。目前的方法主要是将EHR编码作为一个多标签文本分类任务，采用固定窗口大小的浅卷积神经网络，无法学习可变的n-gram特征和代码之间的本体结构。  
 本文工作：（1）在本文中，我们利用一个紧密连接的卷积神经网络，它能够产生可变的n-gram特征，用于临床笔记特征的学习。（2）我们还结合了多尺度特征注意来自适应地选择多尺度特征，因为每个单词的临床笔记中信息量最大的n-图可以根据邻域而变化长度。（3）我们利用图卷积神经网络来捕捉医疗编码之间的层次关系和每个编码的语义。最后，我们在公共数据集上验证了我们的方法，评估结果表明我们的方法可以显著优于其他最新的模型。  
-  
+
+[2] Mullenbach, James, et al. **Explainable prediction of medical codes from clinical text.** arXiv preprint arXiv:1802.05695 (2018).[[PDF]](https://arxiv.org/pdf/1802.05695.pdf)  
+**主要内容**：  
+
+
 ### 3. Prediction  
 [1] Gao, Jingyue, et al. **Camp: Co-attention memory networks for diagnosis prediction in healthcare.** ICDM, 2019. [[PDF]](https://jygao97.github.io/papers/CAMP_ICDM19_long.pdf)  
 本地路径：F:\A_博士阶段\论文\CIKM2019\医疗健康相关  
