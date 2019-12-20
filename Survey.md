@@ -60,6 +60,13 @@ cnn需要47秒分析2296张测试图像。cnn对77例胃癌病变中71例诊断�
 ## CS Classification
 ### 1. Knowledge Graph
 [1] Xiancheng Xie, Yun Xiong, Philip S. Yu, Yangyong Zhu. **EHR Coding with Multi-scale Feature Attention and Structured Knowledge Graph Propagation**. CIKM 2019: 649-658 [[PDF]](http://delivery.acm.org/10.1145/3360000/3357897/p649-xie.pdf?ip=211.87.239.55&id=3357897&acc=OPEN&key=BF85BBA5741FDC6E%2EBA9BBD89F2E1EC6A%2E4D4702B0C3E38B35%2E6D218144511F3437&__acm__=1575427234_a9f472fe217137daaa87426759aa5dc1)  
+本地路径：F:\A_博士阶段\论文\CIKM2019\医疗健康相关  
+
+### 1. Attention Mechanism 
+[1] Xiancheng Xie, Yun Xiong, Philip S. Yu, Yangyong Zhu. **EHR Coding with Multi-scale Feature Attention and Structured Knowledge Graph Propagation**. CIKM 2019: 649-658 [[PDF]](http://delivery.acm.org/10.1145/3360000/3357897/p649-xie.pdf?ip=211.87.239.55&id=3357897&acc=OPEN&key=BF85BBA5741FDC6E%2EBA9BBD89F2E1EC6A%2E4D4702B0C3E38B35%2E6D218144511F3437&__acm__=1575427234_a9f472fe217137daaa87426759aa5dc1)  
+本地路径：F:\A_博士阶段\论文\CIKM2019\医疗健康相关  
+
+[2] Gao, Jingyue, et al. **Camp: Co-attention memory networks for diagnosis prediction in healthcare.** ICDM, 2019. [[PDF]](https://jygao97.github.io/papers/CAMP_ICDM19_long.pdf)  
 本地路径：F:\A_博士阶段\论文\CIKM2019\医疗健康相关
 
 
