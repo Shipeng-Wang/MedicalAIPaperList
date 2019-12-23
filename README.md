@@ -2,14 +2,16 @@
 ***
 ## Medical Classification
 ### 1. REVIEW and SURVEY 综述类
-[1] Shickel, Benjamin, et al. **Deep EHR: a survey of recent advances in deep learning techniques for electronic health record (EHR) analysis.** IEEE journal of biomedical and health informatics 22.5 (2017): 1589-1604.  
+[1] Shickel, Benjamin, et al. **Deep EHR: a survey of recent advances in deep learning techniques for electronic health record (EHR) analysis.** IEEE journal of biomedical and health informatics 22.5 (2017): 1589-1604.[[PDF]](https://arxiv.org/pdf/1706.03446.pdf)    
 本地路径：F:\A_博士阶段\论文\Survey      
 
-[2] Esteva, Andre, et al. **A guide to deep learning in healthcare.** Nature medicine 25.1 (2019): 24-29.  
+[2] Esteva, Andre, et al. **A guide to deep learning in healthcare.** Nature medicine 25.1 (2019): 24-29. [[PDF]](https://med.stanford.edu/content/dam/sm/dbds/documents/biostats-workshop/s41591-018-0316-z.pdf)    
 本地路径：F:\A_博士阶段\论文\Survey      
 
-[3] Topol, Eric J. **High-performance medicine: the convergence of human and artificial intelligence.** Nature medicine 25.1 (2019): 44-56.  
-本地路径：F:\A_博士阶段\论文\Survey   
+[3] Topol, Eric J. **High-performance medicine: the convergence of human and artificial intelligence.** Nature medicine 25.1 (2019): 44-56.[[PDF]](https://www.gwern.net/docs/ai/2019-topol.pdf)    
+本地路径：F:\A_博士阶段\论文\Survey  
+
+[4] Tjoa, Erico, and Cuntai Guan. **A survey on explainable artificial intelligence (xai): Towards medical xai.** arXiv preprint arXiv:1907.07374 (2019). [[PDF]](https://arxiv.org/ftp/arxiv/papers/1907/1907.07374.pdf) 
 
 ### 2. Embedding
 #### 2.1 Medical Concept Embedding
